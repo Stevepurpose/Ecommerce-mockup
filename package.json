@@ -1,7 +1,7 @@
 {
   "name": "mockshop",
   "version": "0.1.0",
-  "homepage":"https://Stevepurpose.github.io/Ecommerce-mockup",
+  "homepage":"http://Stevepurpose.github.io/Ecommerce-mockup",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
