@@ -1,42 +1,94 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body{
+  width: auto;
+  height: auto;
+}
+
+
 .App{
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: cornflowerblue;
   color: white;
+  border: 1px solid white;
+  width: 95%;
+  margin: auto;
   
 }
+
+header{
+  width: 100%;
+}
+
+nav{
+  display: flex;
+  margin-left: auto;
+  border: 1px solid purple;
+  width: 20%;
+  justify-content: space-evenly;
+  background-color: goldenrod;
+  padding: 0.5rem;
+}
+
+.icon{
+   margin:auto;
+   font-size: 2.5rem;
+}
+
+.icon:hover{
+   color: firebrick;
+}
+
+
+.for-items{
+  display: grid;
+  grid-template-columns: repeat(2,40%);
+  grid-gap:1.5rem;
+  justify-content: space-around; 
+  }
+  
+
+
+.for-shop{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
 
 .for-Links{
   position: absolute;
   right: 12px;
 }
 
-.for-items{
-display: grid;
-grid-template-rows: repeat(2,1fr);
-grid-template-columns: repeat(2,1fr);
-grid-gap: 80px;
-
-
-}
-
-
-
 .for-sub{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border: 5px solid gainsboro;
 box-shadow: 5px 5px 5px gainsboro;
 color: white;
 background-color: gray;
+
 }
 
 p{
-  font-size: 20px;
+  font-size:1.25rem;
 }
 
 footer{
   font-weight: bolder;
-  margin-top: 20px;
+  margin:auto;
   color: red;
-  padding: 20px;
+  padding:1.25rem;
   border: 5px solid gainsboro;
   box-shadow: 5px 5px 5px gainsboro;
 }
@@ -44,6 +96,7 @@ footer{
 button{
   background-color: purple;
   color: white;
+  padding: 1rem;
 }
 
 
@@ -54,48 +107,122 @@ h1{
 }
 
 img{
-  width: 300px;
-  height: 300px;
+  width: 70%;
+  height:50%;
 }
 
 
 .the-statement{
   color:white;
-  padding: 20px;
+  padding:1.25rem;
   background-color: black;
 }
 
 
-@media (max-width:416px) {
-
-  .for-items{
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
-  .the-des{
-    margin-left:1px;
-    font-size: medium;
-  }
-
-
-  h1{
-    font-size: large;
-  }
-
-  /*
-  .for-carter,.headmob{
-    display: none;
-  }*/
+.checkout{
   
-  .carter-mob{
-    font-size: medium;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  
+.container{
+  border: 1px solid goldenrod;
+  margin: auto;
+  box-shadow: 2px 2px 2px ghostwhite;
+}
 
+.cart-Items{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   
 }
+
+.controls{
+  display: flex;
+
+}
+
+.quantify{
+  padding: 1.5rem;
+}
+
+.when_empty{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width:687px) {
+.for-carter{
+  font-size: 1.5rem;
+}
+
+}
+
+
+@media (max-width:525px) {
+  nav{
+    display: flex;
+    margin-left: auto;
+    border: 1px solid purple;
+    width: 40%;
+    justify-content: space-evenly;
+  }
+
+
+  .for-carter{
+    font-size: 1.3rem;
+  }
+
+.carter-mob{
+  font-size: 1.2rem;
+}
+
+}
+
+
+@media (max-width:517px) {
+.item_name{
+  font-size: 1rem;
+}
+
+.the-price,.the-des{
+  font-size:1rem;
+}
+  
+}
+
+
+@media (max-width:437px) {
+  .for-items{
+    display: flex;
+    flex-direction: column;
+    gap:1.5rem;
+    justify-content: space-around; 
+    }
+
+}
+
+@media (max-width:362px) {
+  .item_name{
+    font-size: 0.8rem;
+  }
+
+.the-price,.the-des{
+  font-size:0.8rem;
+}
+
+
+button{
+  padding: 0.3rem;
+}
+
+ }
+
+  
+
 
 
 

@@ -3,8 +3,6 @@ import {BrowserRouter as Router,Routes,Route} from "react-router-dom"
 import {NavLink} from "react-router-dom"
 import  {ShoppingCart,Storefront}  from "phosphor-react"
 import{useState} from "react"
-//import Navbar from './Navbar';
-
 import Shop from  './Shop'
 import Cart from  './Cart'
 import product1  from "./productviews/ashTopfinal.png"
@@ -25,19 +23,14 @@ console.log(cartItems)
 
 const addToCart=(x)=>{
   setCartItems((prev)=>({...prev,[x]:prev[x]+1}))
-
 }
-
 
 function removeFromCart(x){
   setCartItems((prev)=>({...prev,[x]:prev[x]-1}))
-
 }
-
 function updateRandomCount(newAmount,x){
   setCartItems(prev=>({...prev,[x]:newAmount}))
   }
-
   function getTotalCartAmount(){
     let totalAmount=0
     for(const key in cartItems){
@@ -48,33 +41,24 @@ function updateRandomCount(newAmount,x){
     }
     return totalAmount
   }
-
-
-
   return (
     <div className="App">
       <Router>
       <header>
         <nav>
-          <NavLink to ="/"><Storefront size={48}/></NavLink>
-          <NavLink to ="Cart"><ShoppingCart size={48}/></NavLink>
-        </nav>
-        
+          <NavLink to ="/"  className="icon"><Storefront /></NavLink>
+          <NavLink to ="Cart" className="icon"><ShoppingCart/></NavLink>
+        </nav> 
       </header>
       <main>
 <Routes>
-
 <Route index   element={<Shop  items={items}   addToCart={addToCart}  cartItems={cartItems} />} />
-
-
-
 <Route path="/Cart"  element={<Cart  items={items}  cartItems={cartItems} addToCart={addToCart}
  updateRandomCount={updateRandomCount} removeFromCart={removeFromCart} getTotalCartAmount={getTotalCartAmount} />}/>
 </Routes>
 </main>
 </Router>
 <Footer/>
-      
     </div>
   );
 }
